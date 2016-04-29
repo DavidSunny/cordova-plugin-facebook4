@@ -270,7 +270,11 @@
             dialog.mode = FBSDKShareDialogModeShareSheet;
         } else if (params[@"share_feedBrowser"]) {
             dialog.mode = FBSDKShareDialogModeFeedBrowser;
-        }
+        } else if (params[@"share_native"]) {
+ +		    dialog.mode = FBSDKShareDialogModeNative;
+ +	    } else if (params[@"share_feedWeb"]) {
+ +		    dialog.mode = FBSDKShareDialogModeFeedWeb;
+ +		}
 
         [dialog show];
         return;
